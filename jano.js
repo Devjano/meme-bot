@@ -84,6 +84,17 @@ client.on("message", async message => {
     });
   }
 
+ if (message.content === "fstop") {
+    var servers = {};
+
+    if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+
+  }
+
+  if (message.content === "fstop") {
+    message.channel.send(` farhad zirak | Thanks You`)
+  }
+})
 
 
 
