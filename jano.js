@@ -70,7 +70,7 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-  if (message.content === fz1) {
+  if (message.content === f1) {
     message.react("🔊");
     message.reply(`farhad zirak`);
     const voiceChannel = message.member.voice.channel;
