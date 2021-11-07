@@ -16,7 +16,7 @@ client.on("ready", () => {
   console.log(
     `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
   );
-  let statuses = [`fzhelp , farhad zirak`];
+  let statuses = [`fzhelp`];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
     client.user.setActivity(STREAMING, {
@@ -30,10 +30,10 @@ client.on("ready", () => {
 
 ////////////////////
 client.on("message", message => {
-  if (message.content.startsWith( "fzhelp")) {
+  if (message.content.startsWith( "fhelp")) {
     var embed = new Discord.MessageEmbed().setColor(`#000000`).setDescription(`
       **Help Comand** 
-> \`fz1\`
+> \`f1\`
 
 
 
@@ -72,14 +72,13 @@ client.on("ready", () => {
 client.on("message", async message => {
   if (message.content === f1) {
     message.react("🔊");
-    message.reply(`farhad zirak`);
+    message.reply(`mdm`);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
-      return message.repl(`جــۆيــن ڤـــۆيـــس بـــە
-**`);
+      return message.repl(`جــۆيــن ڤـــۆيـــس بـــە**`);
     }
     voiceChannel.join().then(connnection => {
-      let stream = yt("https://youtu.be/S__SJ8bRF58", { audioonly: true });
+      let stream = yt("link gorane lera da bne", { audioonly: true });
       const dispatcher = connnection.play(stream);
     });
   }
